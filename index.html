@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025年度招聘公告 - 个人招聘</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft YaHei", "SimSun", serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+            padding: 35px;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
+        }
+        
+        .header {
+            text-align: center;
+            padding: 15px 0 25px;
+            border-bottom: 3px solid #e74c3c;
+            margin-bottom: 25px;
+            position: relative;
+            background: linear-gradient(to right, #fff 0%, #fff9f9 100%);
+        }
+        
+        .header h1 {
+            font-size: 28px;
+            color: #e74c3c;
+            margin-bottom: 8px;
+            letter-spacing: 2px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+        }
+        
+        .header h2 {
+            font-size: 22px;
+            color: #c0392b;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+        
+        .document-number {
+            font-size: 16px;
+            font-weight: bold;
+            color: #555;
+            margin-bottom: 15px;
+            background: #f9f2f2;
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 15px;
+        }
+        
+        .section {
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px dashed #ddd;
+        }
+        
+        .section:last-child {
+            border-bottom: none;
+        }
+        
+        .section-title {
+            font-size: 20px;
+            color: #e74c3c;
+            margin-bottom: 12px;
+            padding-left: 12px;
+            border-left: 4px solid #e74c3c;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 80px;
+            height: 2px;
+            background: linear-gradient(to right, #e74c3c, transparent);
+        }
+        
+        .content {
+            padding: 0 15px;
+        }
+        
+        .content p {
+            margin-bottom: 12px;
+            text-indent: 2em;
+        }
+        
+        .list-title {
+            font-weight: bold;
+            margin: 12px 0 8px;
+            color: #444;
+        }
+        
+        ul, ol {
+            padding-left: 30px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 8px;
+        }
+        
+        li::before {
+            content: "•";
+            color: #e74c3c;
+            font-weight: bold;
+            position: absolute;
+            left: -12px;
+        }
+        
+        .attachment {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #eee;
+            margin-top: 15px;
+            box-shadow: inset 0 0 8px rgba(0,0,0,0.03);
+        }
+        
+        .attachment h3 {
+            color: #e74c3c;
+            margin-bottom: 12px;
+            text-align: center;
+            font-size: 18px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .attachment-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .attachment-item {
+            background: white;
+            border-radius: 6px;
+            padding: 15px;
+            text-align: center;
+            width: 170px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            transition: all 0.3s ease;
+            border: 1px solid #f0f0f0;
+        }
+        
+        .attachment-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(231, 76, 60, 0.15);
+            border-color: #e74c3c;
+        }
+        
+        .file-icon {
+            font-size: 36px;
+            color: #e74c3c;
+            margin-bottom: 10px;
+        }
+        
+        .file-name {
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #444;
+            font-size: 14px;
+        }
+        
+        .file-size {
+            color: #777;
+            font-size: 12px;
+            margin-bottom: 12px;
+        }
+        
+        .download-btn {
+            display: inline-block;
+            background: #e74c3c;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: all 0.3s;
+            font-size: 13px;
+            width: 100%;
+        }
+        
+        .download-btn:hover {
+            background: #c0392b;
+            box-shadow: 0 2px 6px rgba(231, 76, 60, 0.25);
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 15px;
+            color: #777;
+            font-size: 13px;
+            border-top: 1px solid #eee;
+        }
+        
+        .note {
+            background: #fff9e6;
+            padding: 15px;
+            border-radius: 6px;
+            border-left: 4px solid #ffcc00;
+            margin: 20px 0;
+            position: relative;
+            font-size: 14px;
+        }
+        
+        .note::before {
+            content: "!";
+            position: absolute;
+            left: -10px;
+            top: -10px;
+            background: #ffcc00;
+            color: white;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        
+        .highlight {
+            background: #fff0f0;
+            color: #e74c3c;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        
+        .stamp {
+            position: absolute;
+            top: 15px;
+            right: 30px;
+            opacity: 0.12;
+            transform: rotate(15deg);
+            font-size: 90px;
+            color: #e74c3c;
+            font-weight: bold;
+            z-index: 0;
+        }
+        
+        .contact-box {
+            background: linear-gradient(135deg, #f9f2f2 0%, #f0e6e6 100%);
+            padding: 15px;
+            border-radius: 6px;
+            text-align: center;
+            margin: 20px 0;
+            border: 1px dashed #e74c3c;
+            font-size: 14px;
+        }
+        
+        .contact-title {
+            color: #e74c3c;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        
+        .contact-info {
+            font-size: 15px;
+            background: white;
+            padding: 8px;
+            border-radius: 4px;
+            display: inline-block;
+            border: 1px solid #e0e0e0;
+            margin: 4px;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px 15px;
+            }
+            
+            .header h1 {
+                font-size: 22px;
+            }
+            
+            .header h2 {
+                font-size: 18px;
+            }
+            
+            .section-title {
+                font-size: 18px;
+            }
+            
+            ul, ol {
+                padding-left: 22px;
+            }
+            
+            .stamp {
+                display: none;
+            }
+            
+            .attachment-container {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+            
+            .attachment-item {
+                width: 100%;
+                max-width: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="stamp">非官方</div>
+        
+        <div class="header">
+            <h1>2025年度招聘公告</h1>
+            <h2>关于我面向社会公开招聘女朋友的公告</h2>
+            <div class="document-number">本人发[2025]1号</div>
+        </div>
+        
+        <div class="content">
+            <p>为进一步优化社会单身结构，消灭空巢青年，优化个人家庭结构，本人未经省市县民政部门批准，结合本人实际需要，经研究决定，计划面向社会公开招聘女朋友一名。现将有关事项公告如下:</p>
+            
+            <div class="section">
+                <div class="section-title">一、应聘条件</div>
+                <ol>
+                    <li><strong>女性</strong>;</li>
+                    <li><strong>稳定工作</strong>（<span class="highlight">我有</span>）;</li>
+                    <li><strong>专科及以上</strong>（<span class="highlight">我本科</span>）;</li>
+                    <li><strong>性格开朗，积极向上</strong>（<span class="highlight">我e人</span>）;</li>
+                    <li><strong>长的当然是越美越好，不美也没事，情商高更招人喜欢，自信放光芒</strong>。</li>
+                </ol>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">二、招聘岗位</div>
+                <p><strong>女朋友</strong>，岗位限一无法扩招。</p>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">三、报名时间和方式</div>
+                <ol>
+                    <li><strong>网上报名</strong>，报名时间：不限; </li>
+                    <li><strong>网上资格初审</strong>初审时间：不限。</li>
+                    <li><strong>网上缴费</strong>缴费时间：不限。</li>
+                    <li><strong>资格审查</strong>应聘人员报名及笔试前的资格审查在网上进行，合格后现场进行（<span class="highlight">约饭版</span>)。</li>
+                </ol>
+                
+                <div class="contact-box">
+                    <div class="contact-title">报名方式</div>
+                    <div class="contact-info">微信：暂无</div>
+                    <div class="contact-info">邮箱：2399174049@qq.com</div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">四、考试</div>
+                <p>考试分为笔试和面试：</p>
+                <ol>
+                    <li><strong>笔试</strong>：采用线上聊天了解方式进行。</li>
+                    <li><strong>面试</strong>：笔试通过后以线下方式进行。</li>
+                </ol>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">五、考察、体检、递补</div>
+                <p>按照招聘岗位，按照1：1比例确定进入考察体检范围人选。本人具体负责考察体检工作：</p>
+                <ol>
+                    <li><strong>考察</strong>：考察可根据岗位条件要求采取多种方式进行，根据考察情况作出考察结论，考察贯穿整个工作环节。</li>
+                    <li><strong>体检</strong>：由县级以上民政部门提供免费体检。</li>
+                    <li><strong>递补</strong>：拟聘用人员在考察体检聘用环节放弃的，按照规定进入递补环节。</li>
+                </ol>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">六、聘用</div>
+                <p>考试、考察、体检合格的拟聘用人员，将按规定签订恋爱合同，确立恋爱关系。恋爱期间表现优异可晋升领导职务，并委托第三方机构（<span class="highlight">民政局</span>）签订结婚合同，<span class="highlight">最低年限100年</span>。</p>
+            </div>
+            
+            <div class="section">
+                <div class="section-title">七、其他</div>
+                <p>本次招聘不指定考试辅导用书，不举办也不委托任何机构举办考试辅导培训班（<span class="highlight">长的美的考生可直接私聊我，我给你透题</span>）。</p>
+                
+                <div class="note">
+                    <p><strong>重要提示：</strong>本公告最终解释权归本人所有。招聘过程中如遇不可抗力因素（如父母催婚、亲戚介绍相亲等），招聘流程可能相应调整。</p>
+                </div>
+            </div>
+            
+            <div class="attachment">
+                <h3>附件下载</h3>
+                <div class="attachment-container">
+                    <div class="attachment-item">
+                        <div class="file-icon"><i class="far fa-file-word"></i></div>
+                        <div class="file-name">岗位详情.doc</div>
+                        <div class="file-size">文件大小：86KB</div>
+                        <a href="#" class="download-btn" onclick="downloadFile('岗位详情.doc')">下载附件</a>
+                    </div>
+                    
+                    <div class="attachment-item">
+                        <div class="file-icon"><i class="far fa-file-alt"></i></div>
+                        <div class="file-name">诚信考试承诺书.doc</div>
+                        <div class="file-size">文件大小：62KB</div>
+                        <a href="#" class="download-btn" onclick="downloadFile('诚信考试承诺书.doc')">下载附件</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>发布人：神秘招聘者 &nbsp; | &nbsp; 发布日期：2025年1月1日</p>
+            <p>温馨提示：本公告纯属娱乐，祝大家早日找到真爱！</p>
+        </div>
+    </div>
+    
+    <script>
+        function downloadFile(filename) {
+            // 创建更美观的虚拟文件内容
+            let content = "";
+            if(filename === "岗位详情.doc") {
+                content = `
+                <div style="font-family: 'Microsoft YaHei', sans-serif; max-width: 800px; margin: 0 auto; padding: 30px;">
+                    <div style="text-align: center; margin-bottom: 30px;">
+                        <h1 style="color: #e74c3c; font-size: 28px; border-bottom: 2px solid #e74c3c; padding-bottom: 10px; display: inline-block;">招聘岗位详情</h1>
+                    </div>
+                    
+                    <div style="background: #f9f9f9; padding: 20px; border-radius: 8px; margin-bottom: 25px;">
+                        <h2 style="color: #e74c3c; margin-bottom: 15px;">一、岗位信息</h2>
+                        <table style="width: 100%; border-collapse: collapse;">
+                            <tr>
+                                <td style="width: 30%; padding: 8px 12px; border: 1px solid #ddd; background: #f5f5f5; font-weight: bold;">岗位名称</td>
+                                <td style="padding: 8px 12px; border: 1px solid #ddd;">女朋友</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 8px 12px; border: 1px solid #ddd; background: #f5f5f5; font-weight: bold;">招聘人数</td>
+                                <td style="padding: 8px 12px; border: 1px solid #ddd;">1人（限招）</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 8px 12px; border: 1px solid #ddd; background: #f5f5f5; font-weight: bold;">工作地点</td>
+                                <td style="padding: 8px 12px; border: 1px solid #ddd;">心之所向，爱之所往</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 8px 12px; border: 1px solid #ddd; background: #f5f5f5; font-weight: bold;">合同期限</td>
+                                <td style="padding: 8px 12px; border: 1px solid #ddd;">恋爱合同（可续签为结婚合同）</td>
+                            </tr>
+                        </table>
+                    </div>
+                    
+                    <div style="background: #f9f9f9; padding: 20px; border-radius: 8px; margin-bottom: 25px;">
+                        <h2 style="color: #e74c3c; margin-bottom: 15px;">二、岗位职责</h2>
+                        <ul style="list-style-type: square; padding-left: 25px; color: #555;">
+                            <li style="margin-bottom: 10px;">负责日常情感交流与陪伴</li>
+                            <li style="margin-bottom: 10px;">共同参与生活决策与规划</li>
+                            <li style="margin-bottom: 10px;">提供精神支持与情感价值</li>
+                            <li style="margin-bottom: 10px;">协助应对家庭催婚压力</li>
+                            <li style="margin-bottom: 10px;">共同创造美好生活体验</li>
+                            <li>携手面对人生挑战与机遇</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="background: #f9f9f9; padding: 20px; border-radius: 8px; margin-bottom: 25px;">
+                        <h2 style="color: #e74c3c; margin-bottom: 15px;">三、福利待遇</h2>
+                        <div style="display: flex; flex-wrap: wrap; gap: 15px;">
+                            <div style="flex: 1; min-width: 200px; background: white; padding: 15px; border-radius: 6px; border: 1px solid #eee; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+                                <h3 style="color: #e74c3c; text-align: center; margin-bottom: 10px;">情感保障</h3>
+                                <ul style="padding-left: 20px; font-size: 14px;">
+                                    <li>终身情感支持</li>
+                                    <li>专属情感关怀</li>
+                                    <li>优先陪伴权</li>
+                                </ul>
+                            </div>
+                            
+                            <div style="flex: 1; min-width: 200px; background: white; padding: 15px; border-radius: 6px; border: 1px solid #eee; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+                                <h3 style="color: #e74c3c; text-align: center; margin-bottom: 10px;">生活福利</h3>
+                                <ul style="padding-left: 20px; font-size: 14px;">
+                                    <li>节日惊喜礼包</li>
+                                    <li>专属纪念日庆祝</li>
+                                    <li>共同旅行计划</li>
+                                </ul>
+                            </div>
+                            
+                            <div style="flex: 1; min-width: 200px; background: white; padding: 15px; border-radius: 6px; border: 1px solid #eee; box-shadow: 0 2px 5px rgba(0,0,0,0.05);">
+                                <h3 style="color: #e74c3c; text-align: center; margin-bottom: 10px;">发展前景</h3>
+                                <ul style="padding-left: 20px; font-size: 14px;">
+                                    <li>晋升为未婚妻</li>
+                                    <li>升级为妻子</li>
+                                    <li>共同家庭股权</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="text-align: center; margin-top: 30px; color: #777; font-size: 14px;">
+                        本文件最终解释权归招聘者所有
+                    </div>
+                </div>
+                `;
+            } else {
+                content = `
+                <div style="font-family: 'Microsoft YaHei', sans-serif; max-width: 800px; margin: 0 auto; padding: 30px;">
+                    <div style="text-align: center; margin-bottom: 30px;">
+                        <h1 style="color: #e74c3c; font-size: 28px; border-bottom: 2px solid #e74c3c; padding-bottom: 10px; display: inline-block;">诚信考试承诺书</h1>
+                    </div>
+                    
+                    <div style="background: #f9f9f9; padding: 30px; border-radius: 8px; margin-bottom: 25px; text-align: center;">
+                        <p style="font-size: 18px; line-height: 1.8; margin-bottom: 25px;">
+                            本人郑重承诺，在本次"招聘女朋友"应聘过程中：
+                        </p>
+                        
+                        <div style="text-align: left; max-width: 600px; margin: 0 auto;">
+                            <div style="display: flex; align-items: flex-start; margin-bottom: 15px;">
+                                <div style="background: #e74c3c; color: white; width: 25px; height: 25px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px; flex-shrink: 0;">1</div>
+                                <div>提供的一切个人信息均真实有效，不隐瞒个人情感状况</div>
+                            </div>
+                            
+                            <div style="display: flex; align-items: flex-start; margin-bottom: 15px;">
+                                <div style="background: #e74c3c; color: white; width: 25px; height: 25px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px; flex-shrink: 0;">2</div>
+                                <div>不伪造个人经历、学历、工作背景等关键信息</div>
+                            </div>
+                            
+                            <div style="display: flex; align-items: flex-start; margin-bottom: 15px;">
+                                <div style="background: #e74c3c; color: white; width: 25px; height: 25px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px; flex-shrink: 0;">3</div>
+                                <div>认真对待每一轮考核（笔试、面试、考察等）</div>
+                            </div>
+                            
+                            <div style="display: flex; align-items: flex-start; margin-bottom: 15px;">
+                                <div style="background: #e74c3c; color: white; width: 25px; height: 25px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px; flex-shrink: 0;">4</div>
+                                <div>不通过非正当手段获取考试信息或寻求特殊照顾</div>
+                            </div>
+                            
+                            <div style="display: flex; align-items: flex-start;">
+                                <div style="background: #e74c3c; color: white; width: 25px; height: 25px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px; flex-shrink: 0;">5</div>
+                                <div>如被录用，将严格遵守恋爱关系中的各项义务</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 40px;">
+                        <table style="width: 100%; max-width: 500px; margin: 0 auto; border-collapse: collapse;">
+                            <tr>
+                                <td style="padding: 15px 0; width: 40%; text-align: right; padding-right: 20px;">承诺人：</td>
+                                <td style="border-bottom: 1px solid #ddd; padding: 15px 0;"></td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 15px 0; text-align: right; padding-right: 20px;">身份证号：</td>
+                                <td style="border-bottom: 1px solid #ddd; padding: 15px 0;"></td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 15px 0; text-align: right; padding-right: 20px;">日期：</td>
+                                <td style="border-bottom: 1px solid #ddd; padding: 15px 0;">2025年____月____日</td>
+                            </tr>
+                        </table>
+                    </div>
+                    
+                    <div style="text-align: center; margin-top: 40px; color: #777; font-size: 14px;">
+                        注：本承诺书需在笔试前提交，违反承诺者将被取消应聘资格
+                    </div>
+                </div>
+                `;
+            }
+            
+            // 创建Blob对象
+            const blob = new Blob([content], { type: 'application/msword' });
+            
+            // 创建下载链接
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = filename;
+            
+            // 触发下载
+            document.body.appendChild(link);
+            link.click();
+            
+            // 清理
+            setTimeout(() => {
+                document.body.removeChild(link);
+                URL.revokeObjectURL(link.href);
+            }, 100);
+            
+            // 显示下载成功提示
+            alert(`"${filename}" 下载成功！文件已保存到您的设备。`);
+        }
+    </script>
+</body>
+</html>
